@@ -50,7 +50,7 @@ public class Signin extends HttpServlet {
     	int type;
     	
     	response.setContentType("text/html");
-        //PrintWriter out = response.getWriter();
+        PrintWriter out = response.getWriter();
      
         name=request.getParameter("nom");
         edat=request.getParameter("edat");
@@ -63,22 +63,32 @@ public class Signin extends HttpServlet {
    	    
    	    if (type==1)
    	    {
+   	    	
+   	    	
    	    	GestorAlumnes gestora = new GestorAlumnes();
    	   	    gestora.setAlumne(name,age,group,password);
    	   	    Gestor gestor=new Gestor();
    	   	    gestor.setPersona(gestora.getAlumne());
+   	   	    out.println("<html>");
+   	   	    out.println("<body>");
+   	   	    out.println("<h1>"+gestora.getAlumne().getIdPersona()+"</h1>");
+   	   	    out.println("</body>"); 
+   	   	    out.println("</html>");
    	    }else{
    	    GestorProfessors gestorp = new GestorProfessors();
    	    gestorp.setProfessor(name,age,password);
    	    Gestor gestor=new Gestor();
    	    gestor.setPersona(gestorp.getProfessor());
+   	    out.println("<html>");
+   	    out.println("<body>");
+   	    out.println("<h1>"+gestorp.getProfessor().getIdPersona()+"</h1>");
+   	    out.println("</body>"); 
+   	    out.println("</html>");
+   	    
+
    	    }
    	    
-   	    /*out.println("<html>");
-   	    out.println("<body>");
-   	    out.println("<h1>All ok</h1>");
-   	    out.println("</body>"); 
-   	    out.println("</html>");*/
+
 
 
     	    

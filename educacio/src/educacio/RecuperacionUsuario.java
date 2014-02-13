@@ -36,20 +36,31 @@ public class RecuperacionUsuario extends HttpServlet {
      */
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         // TODO Auto-generated method stub
-         PrintWriter out = response.getWriter();
+    	String ident;
+    	int id;
+    	String password;
+    	
+    	ident=request.getParameter("nom");
+    	id=Integer.parseInt(ident);
+    	password=request.getParameter("password");
+    	
+    	Gestor gestor=new Gestor();
+    	
+    	
+    	PrintWriter out = response.getWriter();
 
          out.println("<html>");
          out.println("<head></head>");         
          out.println("<body>");
 
-         out.println("Usuario:");
-         String usu=request.getParameter("usuario");
-         out.println(usu);
+         out.println(gestor.getPersona(id,password).getNomPersona());
          out.println("<br>");
-         out.println("Clave:");         
-         String cla=request.getParameter("clave");
-         out.println(cla);
-         
+         out.println(gestor.getPersona(id,password).getEdatPersona());         
+         out.println("<br>");
+         out.println(gestor.getPersona(id,password).getGrupPersona());
+         out.println("<br>");
+         out.println(gestor.getPersona(id,password).getHorariPersona());
+         out.println("<br>");     
          out.println("</body>");
          out.println("</html>");           
     }

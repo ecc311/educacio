@@ -30,6 +30,7 @@ private AlumneMati alumne=new AlumneMati();
 					this.alumne.setNomPersona(nom);
 					this.alumne.setEdatPersona(edat);
 					this.alumne.setGrupPersona();
+					this.alumne.setHorariPersona();
 					this.alumne.setPasswordPersona(password);
 		   
 		   
