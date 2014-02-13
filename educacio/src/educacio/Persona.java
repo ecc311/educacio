@@ -18,6 +18,7 @@ public abstract class Persona {
 	public abstract String getHorariPersona();
 
 	public abstract void setHorariPersona();
+	
 	public abstract String getPasswordPersona();
 
 	public abstract void setPasswordPersona(String password);

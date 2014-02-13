@@ -30,6 +30,7 @@ private AlumneTarda alumne=new AlumneTarda();
 			   		this.alumne.setIdPersona(codi);
 					this.alumne.setNomPersona(nom);
 					this.alumne.setEdatPersona(edat);
+					this.alumne.setHorariPersona();
 					this.alumne.setGrupPersona();
 		   
 		   

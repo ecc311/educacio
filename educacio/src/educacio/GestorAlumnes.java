@@ -43,21 +43,27 @@ public class GestorAlumnes  {
 	public void setAlumne(String nom,int edat,int tipus,String password)
 	{
 		this.tipus=tipus; 
-		this.id=id+1;
+		setId(id+1);
 
 		switch (tipus) {
 		   case 1:
-			   		this.alumne2.setAlumne(id, nom, edat, tipus,password);
+			   		this.alumne2.setAlumne(getId(), nom, edat, tipus,password);
 			   		break;
 
 		   case 2:
 		   
-			   		this.alumne1.setAlumne(id, nom, edat, tipus,password);
+			   		this.alumne1.setAlumne(getId(), nom, edat, tipus,password);
 			   		break;
 		   
 		  }  
 		
 		 }
+	public static int getId() {
+		return id;
+	}
+	public static void setId(int id) {
+		GestorAlumnes.id = id;
+	}
 
 
 }
