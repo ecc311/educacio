@@ -30,6 +30,7 @@ CREATE TABLE `alumne` (
   `password` varchar(45) NOT NULL,
   `edat` int(11) DEFAULT NULL,
   `horari` varchar(45) DEFAULT NULL,
+  `grup` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -52,4 +53,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-02-13  9:29:55
+-- Dump completed on 2014-02-13  9:50:57
