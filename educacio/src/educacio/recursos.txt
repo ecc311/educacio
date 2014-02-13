@@ -1,0 +1,3 @@
+Conexiolocal=locainventat
+ConexioBD=jdbc/BDeducacio
+deletealgu=algudelete
