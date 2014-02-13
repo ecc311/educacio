@@ -18,6 +18,8 @@ public class Gestor {
 	 * (non-Javadoc)
 	 * @see javax.servlet.GenericServlet#init()
 	 */
+	
+	
 	public void init(){
 		
 		Context initContext;
@@ -37,9 +39,18 @@ public class Gestor {
 		}
 	}
 	
-	
+	void setPersona(Persona alumne){
+		/*
+		if (alumne.getIdPersona()>9000)
+		{
+			setProfessor(alumne);
+		}else{
+			
+			setAlumne(alumne);
+		}*/
+	}
 	void setAlumne(Persona alumne){
-		
+		/*
 		init();
 		try {
 			Statement stmt = conn.createStatement();
@@ -52,14 +63,25 @@ public class Gestor {
 		
 		//ResultSet rs = stmt.executeUpdate(sql);
 		
-		alumne.getIdPersona();
-
-		
-		alumne.getGrupPersona();
-	
-		
-		
-		
-		
+	*/
 	}
+	
+	void setProfessor(Persona alumne){
+		/*
+		init();
+		try {
+			Statement stmt = conn.createStatement();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		sql = "INSERT INTO professor SET id='"+alumne.getIdPersona()+"',nom='"+alumne.getNomPersona()+"',edat='"+alumne.getEdatPersona()+"',password='"+alumne.getPasswordPersona()+"'";
+		
+		
+		//ResultSet rs = stmt.executeUpdate(sql);
+		
+	*/
+	}
+	
+	
 }
