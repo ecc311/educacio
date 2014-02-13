@@ -105,7 +105,8 @@ public class Gestor {
 			Statement stmt = conn.createStatement();
 			sql = "SELECT idprofessor,nom,edat FROM professor WHERE idprofessor='"+id+"' AND password='"+password+"'";
 			ResultSet aux=stmt.executeQuery(sql);
-
+			aux.beforeFirst();
+			aux.next();
 			idp=aux.getInt("idprofessor");
 			nom=aux.getString("nom");
 			edat=aux.getInt("edat");
