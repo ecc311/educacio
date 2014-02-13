@@ -26,7 +26,7 @@ public class NomRecursTxt {
 		try {
 			entrada = new BufferedReader( new FileReader( f ) );
 			String linea;
-			nomRecurs= nomRecurs.concat("=");
+			nomRecurs.concat("=");
 			while(entrada.ready()){
 				
 				linea = entrada.readLine();
