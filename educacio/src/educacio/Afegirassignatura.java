@@ -11,7 +11,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import educacio.GestorAlumnes;
 
 /**
  * Servlet implementation class Signin
@@ -44,10 +43,10 @@ public class Afegirassignatura extends HttpServlet {
     	int id;
     	
     	
-    	 Gestor gestor=new Gestor();
-    	 id=Integer.parseInt(request.getParameter("id"));
+        Gestor gestor=new Gestor();
+    	id=Integer.parseInt(request.getParameter("id"));
     	
-         gestor.setAssignatura(gestor.getPersona(3,"eric"),id);
+        gestor.setAssignatura(gestor.getPersona(3,"eric"),id);
     	
          
         PrintWriter out = response.getWriter();

@@ -10,7 +10,7 @@ import educacio.Professor;
  */
 public class GestorProfessors{
 	
-	static int id=0;
+	static int id=9000;
 
 	public Professor professor = new Professor();
 
@@ -34,7 +34,7 @@ public class GestorProfessors{
 	 */
 	public void setProfessor(String nom, int edat,String password) {
 		
-		id=9000+id+1;
+		id=id+1;
 		this.professor.setIdPersona(id);
 		this.professor.setNomPersona(nom);
 		this.professor.setEdatPersona(edat);

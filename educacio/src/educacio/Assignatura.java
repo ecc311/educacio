@@ -10,7 +10,7 @@ public class Assignatura {
 	
 	private int codi;
 	private String nom;
-	private double credits;
+	//private double credits;
 	
 	/**
 	 * @return the codi
@@ -45,6 +45,8 @@ public class Assignatura {
 	/**
 	 * @return the credits
 	 */
+	
+	/*
 	public double getCreditsAssignatura() {
 		return this.credits;
 	}
@@ -53,9 +55,10 @@ public class Assignatura {
 	 * @param credits the credits to set
 	 *            
 	 */
+	/*
 	public void setCreditsAssignatura(double credits) {
 		this.credits = credits;
-	}
+	}*/
 
 
 }

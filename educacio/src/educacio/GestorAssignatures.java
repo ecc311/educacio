@@ -24,7 +24,7 @@ public class GestorAssignatures  {
 
 		this.a.setCodi(codi);
 		this.a.setNomAssignatura(nom);
-		this.a.setCreditsAssignatura(d);
+		//this.a.setCreditsAssignatura(d);
 
 	}
 
