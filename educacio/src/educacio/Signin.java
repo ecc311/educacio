@@ -2,7 +2,7 @@ package educacio;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.Enumeration;
+
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -46,20 +46,34 @@ public class Signin extends HttpServlet {
     	String grup;
     	int group;
     	String password;
+    	String tipus;
+    	int type;
     	
     	response.setContentType("text/html");
-        PrintWriter out = response.getWriter();
+        //PrintWriter out = response.getWriter();
+     
         name=request.getParameter("nom");
         edat=request.getParameter("edat");
    	    age=Integer.parseInt(edat);	
    	    grup=request.getParameter("grup");
    	    group=Integer.parseInt(grup);	
    	    password=request.getParameter("password");
-
-   	    GestorAlumnes gestora = new GestorAlumnes();
-   	    gestora.setAlumne(name,age,group,password);
+   	    tipus=request.getParameter("type");
+   	    type=Integer.parseInt(tipus);
+   	    
+   	    if (type==1)
+   	    {
+   	    	GestorAlumnes gestora = new GestorAlumnes();
+   	   	    gestora.setAlumne(name,age,group,password);
+   	   	    Gestor gestor=new Gestor();
+   	   	    gestor.setPersona(gestora.getAlumne());
+   	    }else{
+   	    GestorProfessors gestorp = new GestorProfessors();
+   	    gestorp.setProfessor(name,age,password);
    	    Gestor gestor=new Gestor();
-   	    gestor.setAlumne(gestora.getAlumne());
+   	    gestor.setPersona(gestorp.getProfessor());
+   	    }
+   	    
    	    /*out.println("<html>");
    	    out.println("<body>");
    	    out.println("<h1>All ok</h1>");

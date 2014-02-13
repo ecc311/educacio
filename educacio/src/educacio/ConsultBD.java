@@ -40,7 +40,7 @@ public class ConsultBD extends HttpServlet{
 			Context envContext = (Context) initContext.lookup("java:/comp/env");
 			NomRecursTxt recurs = new NomRecursTxt();
 			recurs.setFitxer("C:/recursos.txt");
-			DataSource ds = (DataSource) envContext.lookup(recurs.GetRecurs("BDconector"));
+			DataSource ds = (DataSource) envContext.lookup(recurs.GetRecurs("ConexioBD"));
 			conn = ds.getConnection();
 		} catch (NamingException e) {
 			// TODO Auto-generated catch block
