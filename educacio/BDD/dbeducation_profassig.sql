@@ -18,35 +18,31 @@ USE `dbeducation`;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `aluassigprof`
+-- Table structure for table `profassig`
 --
 
-DROP TABLE IF EXISTS `aluassigprof`;
+DROP TABLE IF EXISTS `profassig`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `aluassigprof` (
+CREATE TABLE `profassig` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `idalumne` int(11) NOT NULL,
-  `idassignatura` int(11) NOT NULL,
-  `nota` int(11) DEFAULT NULL,
   `idprofessor` int(11) NOT NULL,
+  `idassignatura` int(11) NOT NULL,
   PRIMARY KEY (`id`),
-  KEY `id_idx` (`idalumne`),
-  KEY `idassignatura_idx` (`idassignatura`),
+  KEY `idassignaturap_idx` (`idassignatura`),
   KEY `idprofessor_idx` (`idprofessor`),
-  CONSTRAINT `idalumne` FOREIGN KEY (`idalumne`) REFERENCES `alumne` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `idassignatura` FOREIGN KEY (`idassignatura`) REFERENCES `assignatura` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `idprofessor` FOREIGN KEY (`idprofessor`) REFERENCES `professor` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+  CONSTRAINT `idprofessor` FOREIGN KEY (`idprofessor`) REFERENCES `professor` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `idassignaturap` FOREIGN KEY (`idassignatura`) REFERENCES `assignatura` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `aluassigprof`
+-- Dumping data for table `profassig`
 --
 
-LOCK TABLES `aluassigprof` WRITE;
-/*!40000 ALTER TABLE `aluassigprof` DISABLE KEYS */;
-/*!40000 ALTER TABLE `aluassigprof` ENABLE KEYS */;
+LOCK TABLES `profassig` WRITE;
+/*!40000 ALTER TABLE `profassig` DISABLE KEYS */;
+/*!40000 ALTER TABLE `profassig` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -58,4 +54,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-02-13  9:50:57
+-- Dump completed on 2014-02-13 11:10:50
