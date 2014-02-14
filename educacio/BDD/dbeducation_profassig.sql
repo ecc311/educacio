@@ -33,7 +33,7 @@ CREATE TABLE `profassig` (
   KEY `idprofessor_idx` (`idprofessor`),
   CONSTRAINT `idprofessor` FOREIGN KEY (`idprofessor`) REFERENCES `professor` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `idassignaturap` FOREIGN KEY (`idassignatura`) REFERENCES `assignatura` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -42,6 +42,7 @@ CREATE TABLE `profassig` (
 
 LOCK TABLES `profassig` WRITE;
 /*!40000 ALTER TABLE `profassig` DISABLE KEYS */;
+INSERT INTO `profassig` VALUES (1,1,1),(2,1,2),(3,2,3),(4,3,4);
 /*!40000 ALTER TABLE `profassig` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -54,4 +55,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-02-13 11:10:50
+-- Dump completed on 2014-02-14  8:22:16

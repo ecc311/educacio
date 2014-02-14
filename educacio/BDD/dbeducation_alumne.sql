@@ -41,6 +41,7 @@ CREATE TABLE `alumne` (
 
 LOCK TABLES `alumne` WRITE;
 /*!40000 ALTER TABLE `alumne` DISABLE KEYS */;
+INSERT INTO `alumne` VALUES (1,'eric','eric',32,'mati',1),(2,'bolli','bolli',21,'tarda',2),(3,'david','david',40,'mati',1),(4,'pedu','pedu',25,'tarda',2);
 /*!40000 ALTER TABLE `alumne` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -53,4 +54,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-02-13  9:50:57
+-- Dump completed on 2014-02-14  8:22:16

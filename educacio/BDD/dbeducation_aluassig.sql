@@ -34,7 +34,7 @@ CREATE TABLE `aluassig` (
   KEY `idassignatura_idx` (`idassignatura`),
   CONSTRAINT `idalumne` FOREIGN KEY (`idalumne`) REFERENCES `alumne` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `idassignatura` FOREIGN KEY (`idassignatura`) REFERENCES `assignatura` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -43,6 +43,7 @@ CREATE TABLE `aluassig` (
 
 LOCK TABLES `aluassig` WRITE;
 /*!40000 ALTER TABLE `aluassig` DISABLE KEYS */;
+INSERT INTO `aluassig` VALUES (1,1,1,NULL),(2,1,2,NULL),(3,2,3,NULL),(4,2,4,NULL),(5,2,2,NULL),(6,3,2,NULL),(7,4,1,NULL),(8,4,2,NULL),(9,4,3,NULL);
 /*!40000 ALTER TABLE `aluassig` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -55,4 +56,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-02-13 11:10:51
+-- Dump completed on 2014-02-14  8:22:16
